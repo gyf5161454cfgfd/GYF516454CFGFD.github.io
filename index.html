@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>心动造页</title>
+    <link rel="icon" href="/img/wywl.png">
+
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/video.css">
+    <link rel="stylesheet" href="/css/right.css">
+    <link rel="stylesheet" href="/css/tabbar.css">
+</head>
+<body>
+<div class="header">
+  <div class="header-nav-center">
+    <div class="nav-item active" data-page="home">首页</div>
+    <div class="nav-item" data-page="follow">关注</div>
+    <div class="nav-item" data-page="recommend">推荐</div>
+  </div>
+</div>
+
+<div class="app-container">
+    <div class="swiper-container" id="swiper">
+        <div class="video-slide">
+            <video id="video-element" autoplay muted loop playsinline></video>
+        </div>
+    </div>
+
+    <div class="video-info">
+        <div class="video-username">@心动造页</div>
+        <div class="video-desc">生活百般滋味，人生需要笑对 ✨</div>
+    </div>
+
+    <div class="floating-controls">
+        <div class="avatar-wrap"><img src="/img/wywl.png" alt="头像"></div>
+        <button class="control-btn" id="soundBtn"><img id="soundIcon" class="icon-img"></button>
+        <button class="control-btn" id="likeBtn"><img id="likeIcon" class="icon-img"><span class="like-count" id="likeCount">0</span></button>
+        <button class="control-btn" id="rewardBtn"><img id="rewardIcon" class="icon-img"></button>
+        <button class="control-btn" id="nextBtn"><img id="nextIcon" class="icon-img"></button>
+    </div>
+
+    <video id="video-pre" style="display:none"></video>
+    <div class="loading-spinner" id="loadingSpinner"><img id="spinnerIcon" class="icon-img spinner"></div>
+    <div class="toast" id="toast"></div>
+
+    <div class="reward-modal" id="rewardModal">
+        <div class="reward-content">
+            <div class="reward-title">赞赏作者</div>
+            <div class="reward-tabs">
+                <div class="reward-tab active" data-type="wechat">微信</div>
+                <div class="reward-tab" data-type="alipay">支付宝</div>
+            </div>
+            <img id="rewardQrcode" class="reward-qrcode">
+            <button class="reward-close" id="rewardClose">关闭</button>
+        </div>
+    </div>
+
+    <div class="tabbar">
+        <div class="tabbar-item active" data-tab="home">首页<img src="/img/qh.png" class="tabbar-refresh"></div>
+        <div class="tabbar-item" data-tab="friend">朋友</div>
+        <div class="tabbar-item" data-tab="publish">
+            <img src="/img/plus.png" class="tabbar-publish-icon">
+        </div>
+        <div class="tabbar-item" data-tab="msg">消息<span class="tabbar-badge">99+</span></div>
+        <div class="tabbar-item" data-tab="me">我</div>
+    </div>
+</div>
+
+<script src="/js/config.js"></script>
+<script src="/js/video.js"></script>
+<script src="/js/controls.js"></script>
+<script src="/js/tabbar.js"></script>
+<script src="/js/main.js"></script>
+</body>
+</html>
